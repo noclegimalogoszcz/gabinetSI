@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundacja Rozwoju Dziecka Sensoria | Wsparcie dla dzieci i rodzin w Kielcach</title>
+    <meta name="description" content="Fundacja Rozwoju Dziecka Sensoria działa w Kielcach. Angażujemy się w projekty społeczne dla dzieci w województwie Świętokrzyskim, darmowe warsztaty dla rodziców, wsparcie rozwoju dzieci i pomoc lokalnej społeczności.">
+    <meta name="keywords" content="fundacja dla dzieci Kielce, wsparcie rozwoju dzieci Kielce, pomoc dzieciom Kielce, warsztaty dla rodziców Kielce, projekty społeczne dla dzieci Świętokrzyskie, fundacja rozwój dziecka Świętokrzyskie">
+    <meta name="author" content="Fundacja Rozwoju Dziecka Sensoria">
+    <meta property="og:title" content="Fundacja Rozwoju Dziecka Sensoria w Kielcach">
+    <meta property="og:description" content="Poznaj Fundację Rozwoju Dziecka Sensoria. Realizujemy bezpłatne projekty, konsultacje oraz warsztaty dla rodzin i placówek z Kielc i całego Świętokrzyskiego. Zostań naszym partnerem lub wesprzyj działania.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/styles.css">
+    
+    <style>
+        /* Dodatkowe style specyficzne dla Fundacji (bazujące na głównym motywie, ale z modyfikacjami dla nowych sekcji) */
+        
+        .hero-foundation {
+            background: linear-gradient(135deg, rgba(248, 250, 252, 1) 0%, rgba(168, 230, 207, 0.3) 100%);
+            padding-top: 10rem;
+            padding-bottom: 8rem;
+        }
+
+        .hero-foundation .glass-blob {
+            background: radial-gradient(circle, rgba(72,181,196,0.3) 0%, rgba(220,211,255,0.4) 100%);
+        }
+
+        .hero-actions-multi {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.15rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--color-bg-alt);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .project-image {
+            height: 200px;
+            background: var(--color-mint);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .project-details {
+            padding: 2rem;
+        }
+        
+        .support-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .support-item {
+            background: rgba(220, 211, 255, 0.2);
+            padding: 1.5rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            border: 1px solid rgba(220, 211, 255, 0.5);
+            transition: var(--transition);
+        }
+
+        .support-item:hover {
+            background: rgba(220, 211, 255, 0.5);
+        }
+        
+        .target-groups {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .target-group {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            min-width: 200px;
+            flex: 1;
+        }
+        
+        .target-group .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--color-mint);
+        }
+
+        .partners-logo {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            opacity: 0.7;
+        }
+
+        .partner-box {
+            width: 150px;
+            height: 80px;
+            background: rgba(0,0,0,0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--color-text-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="../assets/images/sensoria_logo_1776161266703.png" alt="Fundacja Sensoria Logo">
+                <span>Sensoria Fundacja</span>
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html" style="color: var(--color-primary); font-weight: 700;">Gabinet SI</a>
+                <a href="#o-fundacji">O fundacji</a>
+                <a href="#projekty">Projekty</a>
+                <a href="#wsparcie">Jak pomóc</a>
+                <a href="#kontakt" class="btn btn-outline">Kontakt</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-foundation">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">Razem możemy więcej</div>
+                <h1>Wspieramy rozwój dzieci i pomagamy rodzinom budować lepszy start</h1>
+                <p class="subtitle">Fundacja Rozwoju Dziecka Sensoria działa na rzecz dzieci, rodziców i lokalnej społeczności w Kielcach poprzez edukację, wsparcie terapeutyczne i projekty społeczne.</p>
+                <div class="hero-actions-multi">
+                    <a href="#wsparcie" class="btn btn-primary pulse-effect">Wesprzyj fundację</a>
+                    <a href="#kontakt" class="btn btn-secondary">Zostań partnerem</a>
+                    <a href="#kontakt" class="btn btn-outline">Skontaktuj się</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="glass-blob"></div>
+                <!-- Używamy zdjęcia z gabinetu jako łagodnego zdjęcia działań terapeutycznych -->
+                <img src="../assets/images/hero_kids_therapy_1776161304447.png" alt="Dziecko i rodzina, działania wspierające rozwój" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- O fundacji -->
+    <section id="o-fundacji" class="about-section reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kim jesteśmy?</h2>
+            </div>
+            <div class="about-content glass-panel-accent" style="padding: 3rem;">
+                <p><strong>Fundacja Rozwoju Dziecka Sensoria</strong> została powołana, aby wspierać dzieci i ich rodziny w obszarze rozwoju, edukacji, terapii oraz profilaktyki. Naszą misją jest tworzenie bezpiecznej przestrzeni do wzmacniania potencjału dzieci, wspierania rodziców oraz realizowania projektów społecznych odpowiadających na realne potrzeby lokalnej społeczności w Kielcach i regionie Świętokrzyskim.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nasza Misja -->
+    <section class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nasza misja</h2>
+                <p>Opieramy nasze działania na 6 filarach, dających oparcie najmłodszym i ich opiekunom.</p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="icon" style="color: var(--color-mint-dark);">🌱</div>
+                    <h3>Wspieranie rozwoju dzieci</h3>
+                </div>
+                <div class="problem-card">
+                    <div class="icon" style="color: var(--color-primary);">🏫</div>
+                    <h3>Dostęp do edukacji i terapii</h3>
+                </div>
+                <div class="problem-card">
+                    <div class="icon" style="color: var(--color-secondary-dark);">👨‍👩‍👧</div>
+                    <h3>Wzmacnianie kompetencji rodziców</h3>
+                </div>
+                <div class="problem-card">
+                    <div class="icon" style="color: var(--color-mint-dark);">🎨</div>
+                    <h3>Tworzenie projektów społecznych</h3>
+                </div>
+                <div class="problem-card">
+                    <div class="icon" style="color: var(--color-primary);">🤝</div>
+                    <h3>Integracja wokół spraw dzieci</h3>
+                </div>
+                <div class="problem-card">
+                    <div class="icon" style="color: var(--color-secondary-dark);">🏢</div>
+                    <h3>Współpraca z biznesem i instytucjami</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Co robimy -->
+    <section class="offer bg-light reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jakie działania podejmujemy?</h2>
+                <p>Działamy na wielu płaszczyznach, dbając o kompleksowe podejście do problemów.</p>
+            </div>
+            <div class="offer-cards">
+                <div class="card card-hover">
+                    <div class="card-icon bg-mint">🤸</div>
+                    <h3>Wsparcie rozwoju dzieci</h3>
+                    <p>Zajęcia wyrównawcze, wspierające dzieci z trudnościami w nauce i funkcjonowaniu społecznym.</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon bg-purple">💬</div>
+                    <h3>Warsztaty dla rodziców</h3>
+                    <p>Bezpłatne działania edukacyjne i grupy wsparcia z zakresu psychologii rozwoju i wychowania.</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon bg-turquoise">🌍</div>
+                    <h3>Inicjatywy Lokalne</h3>
+                    <p>Wydarzenia integrujące społeczność, akcje promujące wiedzę o integracji sensorycznej i neuroróżnorodności.</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon bg-mint">🎓</div>
+                    <h3>Szkolenia dla placówek</h3>
+                    <p>Współpracujemy z przedszkolami i szkołami w Kielcach dostarczając wsparcia kadrze nauczycielskiej.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projekty -->
+    <section id="projekty" class="projects reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nasze aktualne projekty</h2>
+                <p>Sprawdź, co robimy i dołącz do naszych inicjatyw.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-color: var(--color-secondary);">🎨</div>
+                    <div class="project-details">
+                        <h3>Akademia Zmysłów – warsztaty dla dzieci</h3>
+                        <p>Cykl darmowych warsztatów artystyczno-sensorycznych wyrównujących szanse, integrujących poprzez sztukę i ruch.</p>
+                        <a href="#kontakt" class="btn btn-outline" style="margin-top: 1rem;">Zapytaj o projekt</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-color: var(--color-mint);">👨‍👩‍👦</div>
+                    <div class="project-details">
+                        <h3>Rozmowy o rozwoju – cykl dla rodziców</h3>
+                        <p>Comiesięczne spotkania ze specjalistami, pedagogami i psychologami dla rodzin mierzących się z trudnościami.</p>
+                        <a href="#kontakt" class="btn btn-outline" style="margin-top: 1rem;">Zapytaj o projekt</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-color: rgba(72, 181, 196, 0.2);">🏫</div>
+                    <div class="project-details">
+                        <h3>Zrozumieć Sensorykę – wsparcie szkół</h3>
+                        <p>Projekt we współpracy z samorządem, obejmujący szkolenia kadr z wyposażaniem świetlic.</p>
+                        <a href="#kontakt" class="btn btn-outline" style="margin-top: 1rem;">Zapytaj o projekt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jak mozna pomoc (Wsparcie) -->
+    <section id="wsparcie" class="reveal bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jak możesz wesprzeć fundację?</h2>
+                <p>Każda pomoc ma znaczenie. Działając razem możemy zapewnić lepszy start większej liczbie potrzebujących dzieci.</p>
+            </div>
+            <div class="support-options">
+                <div class="support-item">Darowizna finansowa</div>
+                <div class="support-item">Współpraca partnerska</div>
+                <div class="support-item">Sponsoring strategiczny</div>
+                <div class="support-item">Wolontariat fundacyjny</div>
+                <div class="support-item">Wsparcie rzeczowe i materiałowe</div>
+                <div class="support-item">Patronat nad konkretnym projektem</div>
+            </div>
+            
+            <div class="special-card glass-panel-accent reveal" style="margin-top: 4rem;">
+                <div class="special-content">
+                    <span class="gift-icon">💖</span>
+                    <h2>Wesprzyj nasze działania</h2>
+                    <p>Zapraszamy firmy i grantodawców do wspólnej realizacji wspaniałych inicjatyw na terenie województwa świętokrzyskiego.</p>
+                    <div class="hero-actions-multi" style="justify-content: center; margin-bottom: 0;">
+                        <a href="#kontakt" class="btn btn-primary">Napisz w sprawie współpracy</a>
+                        <a href="#kontakt" class="btn btn-secondary">Kontakt do darowizn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dla kogo dzialamy -->
+    <section class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dla kogo działamy?</h2>
+            </div>
+            <div class="target-groups">
+                <div class="target-group fade-in">
+                    <span class="icon">👧</span>
+                    <h3>Dzieci i młodzież</h3>
+                </div>
+                <div class="target-group fade-in">
+                    <span class="icon">👨‍👩‍👧‍👦</span>
+                    <h3>Rodzice i opiekunowie</h3>
+                </div>
+                <div class="target-group fade-in">
+                    <span class="icon">🏫</span>
+                    <h3>Placówki edukacyjne</h3>
+                </div>
+                <div class="target-group fade-in">
+                    <span class="icon">🏙️</span>
+                    <h3>Lokalne społeczności</h3>
+                </div>
+                <div class="target-group fade-in">
+                    <span class="icon">💼</span>
+                    <h3>Partnerzy biznesowi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnerzy -->
+    <section class="reveal bg-light">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Nasi partnerzy</h2>
+                <p>Nawiązujemy współpracę ze szkołami, firmami i samorządami (Sekcja w budowie).</p>
+            </div>
+            <div class="partners-logo">
+                <div class="partner-box">Logo 1</div>
+                <div class="partner-box">Logo 2</div>
+                <div class="partner-box">Logo 3</div>
+                <div class="partner-box">Logo 4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aktualnosci / Blog / FAQ w uproszczeniu -->
+    <section class="reveal">
+        <div class="container container-sm">
+            <div class="section-header text-center">
+                <h2>Bądź na bieżąco & FAQ</h2>
+            </div>
+            
+            <div class="news-grid" style="margin-bottom: 4rem;">
+                <div class="news-card">
+                    <small>02 Aktualności</small>
+                    <h3 style="margin-top: 0.5rem; font-size: 1.2rem;">Relacja z pierwszych warsztatów sensorycznych</h3>
+                    <p>Krótka notatka o tym, jak wspaniale bawiliśmy się podczas weekendu integracyjnego.</p>
+                </div>
+                <div class="news-card" style="border-top-color: var(--color-primary);">
+                    <small>Porady DLA RODZICÓW</small>
+                    <h3 style="margin-top: 0.5rem; font-size: 1.2rem;">Jak wspierać rozwój dziecka w domu?</h3>
+                    <p>Zbiór darmowych porad od naszych ekspertów z dziedziny integracji sensorycznej.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Jakie wartości są dla nas najważniejsze? <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Wrażliwość, profesjonalizm, empatia, rzetelność i lokalne współdziałanie pomagają nam widzieć każde dziecko jako indywidualność i stwarzać przestrzeń, która jest bezpieczna dla wszystkich.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Gdzie prowadzicie projekty społeczne? <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Nasze obecne projekty odbywają się na terenie miasta Kielce oraz wybranych gmin województwa świętokrzyskiego.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        W jaki sposób mogę wpłacić darowiznę? <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Niebawem uruchrzymo specjalne konto bankowe dla darczyńców. W międzyczasie zapraszamy do kontaktu by omówić wsparcie celowe lub rzeczowe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA & Formularz Kontaktowy -->
+    <section id="kontakt" class="contact reveal">
+        <div class="container">
+            <div class="contact-wrapper glass-panel">
+                <div class="contact-info">
+                    <h2>Skontaktuj się z Fundacją</h2>
+                    <p>Masz pytania, chcesz wesprzeć fundację lub zostać partnerem? Napisz do nas.</p>
+                    <div class="contact-details">
+                        <a href="tel:+48500307427" class="contact-link">
+                            <span class="icon">📞</span>
+                            500 307 427
+                        </a>
+                        <a href="mailto:fundacja@sensoria-kielce.pl" class="contact-link">
+                            <span class="icon">✉️</span>
+                            fundacja@sensoria-kielce.pl
+                        </a>
+                        <div class="contact-link no-hover">
+                            <span class="icon">📍</span>
+                            Kielecki Park Technologiczny, Kielce
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" action="#" method="POST" id="fundacja-contact-form">
+                        <div class="input-group">
+                            <label for="name">Imię i Nazwisko / Nazwa firmy</label>
+                            <input type="text" id="name" name="name" required placeholder="Twoje dane">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">E-mail lub Telefon</label>
+                            <input type="text" id="email" name="email" required placeholder="E-mail / Telefon">
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">Temat (Współpraca / Darowizna / Pytanie)</label>
+                            <input type="text" id="subject" name="subject" placeholder="Czego dotyczy wiadomość?">
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Treść wiadomości</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Napisz do nas..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Wyślij Wiadomość</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <img src="../assets/images/sensoria_logo_1776161266703.png" alt="Sensoria Logo" class="footer-logo">
+            <p>&copy; 2026 Fundacja Rozwoju Dziecka "Sensoria". Wszystkie prawa zastrzeżone.</p>
+            <p class="seo-footer">Wspieramy inicjatywy: <strong>fundacja dla dzieci Kielce</strong> | <strong>projekty społeczne dla dzieci Świętokrzyskie</strong> | <strong>wsparcie rozwoju dzieci Kielce</strong></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
